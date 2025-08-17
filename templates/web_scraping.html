@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}Web Scraping - Web Scraper Pro{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">
+                    <i class="fas fa-globe"></i> Web Scraping
+                </h3>
+            </div>
+            <div class="card-body">
+                <form id="webScrapingForm">
+                    <!-- URL Input -->
+                    <div class="mb-4">
+                        <label for="websiteUrl" class="form-label">
+                            <i class="fas fa-link"></i> URL du site web
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-globe"></i>
+                            </span>
+                            <input type="url" class="form-control" id="websiteUrl" 
+                                   placeholder="https://exemple.com" required>
+                            <button class="btn btn-outline-secondary" type="button" id="validateUrl">
+                                <i class="fas fa-check"></i> Vérifier
+                            </button>
+                        </div>
+                        <div class="form-text">Entrez l'URL complète du site à scraper</div>
+                    </div>
+
+                    <!-- Options générales -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label for="maxPages" class="form-label">
+                                <i class="fas fa-file-alt"></i> Nombre max de pages
+                            </label>
+                            <input type="number" class="form-control" id="maxPages" 
+                                   value="10" min="1" max="100">
+                            <div class="form-text">Limite le nombre de pages à scraper</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="delay" class="form-label">
+                                <i class="fas fa-clock"></i> Délai (secondes)
+                            </label>
+                            <input type="number" class="form-control" id="delay" 
+                                   value="1" min="0" max="10" step="0.5">
+                            <div class="form-text">Délai entre chaque requête</div>
+                        </div>
+                    </div>
+
+                    <!-- Options de contenu -->
+                    <div class="mb-4">
+                        <h5><i class="fas fa-cogs"></i> Options de contenu</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="downloadImages" checked>
+                                    <label class="form-check-label" for="downloadImages">
+                                        <i class="fas fa-images text-success"></i> Télécharger les images
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="downloadCss" checked>
+                                    <label class="form-check-label" for="downloadCss">
+                                        <i class="fab fa-css3-alt text-primary"></i> Télécharger les CSS
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="downloadJs" checked>
+                                    <label class="form-check-label" for="downloadJs">
+                                        <i class="fab fa-js-square text-warning"></i> Télécharger les JS
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="downloadFonts" checked>
+                                    <label class="form-check-label" for="downloadFonts">
+                                        <i class="fas fa-font text-info"></i> Télécharger les polices
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Options avancées -->
+                    <div class="mb-4">
+                        <div class="card border-secondary">
+                            <div class="card-header">
+                                <h6 class="mb-0">
+                                    <i class="fas fa-tools"></i> Options avancées
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="followExternal">
+                                    <label class="form-check-label" for="followExternal">
+                                        <i class="fas fa-external-link-alt"></i> Suivre les liens externes
+                                    </label>
+                                    <div class="form-text">Attention: peut considérablement augmenter le temps de scraping</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label for="maxFileSize" class="form-label">Taille max par fichier (MB)</label>
+                                        <input type="number" class="form-control" id="maxFileSize" 
+                                               value="10" min="1" max="50">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="maxTotalSize" class="form-label">Taille max totale (MB)</label>
+                                        <input type="number" class="form-control" id="maxTotalSize" 
+                                               value="100" min="10" max="1000">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Boutons d'action -->
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-outline-secondary" id="resetForm">
+                            <i class="fas fa-undo"></i> Réinitialiser
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="startScraping">
+                            <i class="fas fa-play"></i> Démarrer le Scraping
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Résultats -->
+        <div id="resultsSection" class="mt-4" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-chart-bar"></i> Résultats</h5>
+                </div>
+                <div class="card-body">
+                    <div id="resultsContent">
+                        <!-- Le contenu sera ajouté dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('webScrapingForm');
+    const startButton = document.getElementById('startScraping');
+    const validateButton = document.getElementById('validateUrl');
+    const resetButton = document.getElementById('resetForm');
+    let currentTaskId = null;
+
+    // Validation d'URL
+    validateButton.addEventListener('click', function() {
+        const url = document.getElementById('websiteUrl').value;
+        if (!url) {
+            showAlert('Veuillez entrer une URL', 'warning');
+            return;
+        }
+
+        validateButton.disabled = true;
+        validateButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Vérification...';
+
+        // Simple validation côté client
+        try {
+            new URL(url);
+            validateButton.innerHTML = '<i class="fas fa-check text-success"></i> Valide';
+            setTimeout(() => {
+                validateButton.innerHTML = '<i class="fas fa-check"></i> Vérifier';
+                validateButton.disabled = false;
+            }, 2000);
+        } catch (e) {
+            validateButton.innerHTML = '<i class="fas fa-times text-danger"></i> Invalide';
+            setTimeout(() => {
+                validateButton.innerHTML = '<i class="fas fa-check"></i> Vérifier';
+                validateButton.disabled = false;
+            }, 2000);
+            showAlert('URL invalide', 'danger');
+        }
+    });
+
+    // Réinitialisation du formulaire
+    resetButton.addEventListener('click', function() {
+        form.reset();
+        document.getElementById('maxPages').value = 10;
+        document.getElementById('delay').value = 1;
+        document.getElementById('maxFileSize').value = 10;
+        document.getElementById('maxTotalSize').value = 100;
+        document.getElementById('downloadImages').checked = true;
+        document.getElementById('downloadCss').checked = true;
+        document.getElementById('downloadJs').checked = true;
+        document.getElementById('downloadFonts').checked = true;
+        document.getElementById('followExternal').checked = false;
+    });
+
+    // Soumission du formulaire
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            url: document.getElementById('websiteUrl').value,
+            options: {
+                max_pages: parseInt(document.getElementById('maxPages').value),
+                delay: parseFloat(document.getElementById('delay').value),
+                download_images: document.getElementById('downloadImages').checked,
+                download_css: document.getElementById('downloadCss').checked,
+                download_js: document.getElementById('downloadJs').checked,
+                download_fonts: document.getElementById('downloadFonts').checked,
+                follow_external_links: document.getElementById('followExternal').checked,
+                max_file_size: parseInt(document.getElementById('maxFileSize').value) * 1024 * 1024,
+                max_total_size: parseInt(document.getElementById('maxTotalSize').value) * 1024 * 1024
+            }
+        };
+
+        startScraping(formData);
+    });
+
+    function startScraping(data) {
+        startButton.disabled = true;
+        startButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Démarrage...';
+
+        fetch('/start-web-scraping', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.error) {
+                showAlert(result.error, 'danger');
+                startButton.disabled = false;
+                startButton.innerHTML = '<i class="fas fa-play"></i> Démarrer le Scraping';
+            } else {
+                currentTaskId = result.task_id;
+                showProgressModal();
+                checkTaskStatus(currentTaskId);
+            }
+        })
+        .catch(error => {
+            showAlert('Erreur: ' + error.message, 'danger');
+            startButton.disabled = false;
+            startButton.innerHTML = '<i class="fas fa-play"></i> Démarrer le Scraping';
+        });
+    }
+
+    function checkTaskStatus(taskId) {
+        const checkStatus = () => {
+            fetch(`/task-status/${taskId}`)
+            .then(response => response.json())
+            .then(status => {
+                updateProgress(status);
+                
+                if (status.status === 'running') {
+                    setTimeout(checkStatus, 2000);
+                } else if (status.status === 'completed') {
+                    showCompletionResults(taskId, status);
+                } else if (status.status === 'error') {
+                    showAlert('Erreur: ' + status.error, 'danger');
+                    hideProgressModal();
+                    resetForm();
+                }
+            })
+            .catch(error => {
+                console.error('Erreur de vérification du statut:', error);
+                setTimeout(checkStatus, 5000);
+            });
+        };
+        
+        checkStatus();
+    }
+});
+</script>
+{% endblock %}

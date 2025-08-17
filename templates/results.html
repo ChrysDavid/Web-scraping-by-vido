@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block title %}Historique - Web Scraper Pro{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h3 class="mb-0">
+                    <i class="fas fa-history"></i> Historique des téléchargements
+                </h3>
+            </div>
+            <div class="card-body">
+                {% if history %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th><i class="fas fa-calendar"></i> Date</th>
+                                    <th><i class="fas fa-tag"></i> Type</th>
+                                    <th><i class="fas fa-link"></i> URL</th>
+                                    <th><i class="fas fa-file"></i> Fichiers</th>
+                                    <th><i class="fas fa-cogs"></i> Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in history %}
+                                <tr>
+                                    <td>
+                                        <small class="text-muted">
+                                            {{ item.completed_at }}
+                                        </small>
+                                    </td>
+                                    <td>
+                                        {% if item.type == 'Web Scraping' %}
+                                            <span class="badge bg-primary">
+                                                <i class="fas fa-globe"></i> {{ item.type }}
+                                            </span>
+                                        {% else %}
+                                            <span class="badge bg-danger">
+                                                <i class="fab fa-youtube"></i> {{ item.type }}
+                                            </span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="url-cell" title="{{ item.url }}">
+                                            {{ item.url[:50] }}{% if item.url|length > 50 %}...{% endif %}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-secondary">
+                                            {{ item.files_count }} fichier{{ 's' if item.files_count > 1 else '' }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <a href="/download/{{ item.task_id }}" class="btn btn-success" title="Télécharger">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                            <button class="btn btn-info" onclick="showTaskDetails('{{ item.task_id }}')" title="Détails">
+                                                <i class="fas fa-info-circle"></i>
+                                            </button>
+                                            <button class="btn btn-danger" onclick="deleteTask('{{ item.task_id }}')" title="Supprimer">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Statistiques -->
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body text-center">
+                                    <h4>{{ history|length }}</h4>
+                                    <p class="mb-0">Total téléchargements</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-success text-white">
+                                <div class="card-body text-center">
+                                    <h4>{{ history|selectattr('type', 'equalto', 'Web Scraping')|list|length }}</h4>
+                                    <p class="mb-0">Web Scraping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body text-center">
+                                    <h4>{{ history|selectattr('type', 'equalto', 'YouTube')|list|length }}</h4>
+                                    <p class="mb-0">YouTube</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-info text-white">
+                                <div class="card-body text-center">
+                                    <h4>{{ history|sum(attribute='files_count') }}</h4>
+                                    <p class="mb-0">Total fichiers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="text-center py-5">
+                        <i class="fas fa-inbox fa-5x text-muted mb-3"></i>
+                        <h4>Aucun téléchargement</h4>
+                        <p class="text-muted">Vous n'avez encore effectué aucun téléchargement.</p>
+                        <div class="mt-4">
+                            <a href="{{ url_for('web_scraping') }}" class="btn btn-primary me-2">
+                                <i class="fas fa-globe"></i> Web Scraping
+                            </a>
+                            <a href="{{ url_for('youtube_download') }}" class="btn btn-danger">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal des détails -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-info-circle"></i> Détails de la tâche
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="detailsContent">
+                <!-- Contenu chargé dynamiquement -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de confirmation de suppression -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-exclamation-triangle text-warning"></i> Confirmer la suppression
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Êtes-vous sûr de vouloir supprimer cette tâche et tous ses fichiers ?</p>
+                <p class="text-danger"><strong>Cette action est irréversible.</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-danger" id="confirmDelete">
+                    <i class="fas fa-trash"></i> Supprimer
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentTaskToDelete = null;
+
+function showTaskDetails(taskId) {
+    fetch(`/task-status/${taskId}`)
+    .then(response => response.json())
+    .then(data => {
+        const content = document.getElementById('detailsContent');
+        content.innerHTML = `
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Informations générales</h6>
+                    <table class="table table-sm">
+                        <tr>
+                            <td><strong>ID de tâche:</strong></td>
+                            <td><code>${taskId}</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Statut:</strong></td>
+                            <td><span class="badge bg-${getStatusColor(data.status)}">${data.status}</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>URL:</strong></td>
+                            <td class="text-break">${data.url || 'N/A'}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Démarré:</strong></td>
+                            <td>${formatDate(data.started_at)}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Terminé:</strong></td>
+                            <td>${formatDate(data.completed_at)}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h6>Statistiques</h6>
+                    <table class="table table-sm">
+                        <tr>
+                            <td><strong>Fichiers:</strong></td>
+                            <td>${data.files_count || 0}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Progrès:</strong></td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: ${data.progress || 0}%">
+                                        ${data.progress || 0}%
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        ${data.error ? `
+                        <tr>
+                            <td><strong>Erreur:</strong></td>
+                            <td class="text-danger">${data.error}</td>
+                        </tr>
+                        ` : ''}
+                    </table>
+                </div>
+            </div>
+        `;
+        
+        const modal = new bootstrap.Modal(document.getElementById('detailsModal'));
+        modal.show();
+    })
+    .catch(error => {
+        showAlert('Erreur lors du chargement des détails: ' + error.message, 'danger');
+    });
+}
+
+function deleteTask(taskId) {
+    currentTaskToDelete = taskId;
+    const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+    modal.show();
+}
+
+document.getElementById('confirmDelete').addEventListener('click', function() {
+    if (!currentTaskToDelete) return;
+    
+    fetch(`/delete-task/${currentTaskToDelete}`, { method: 'DELETE' })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showAlert('Tâche supprimée avec succès', 'success');
+            location.reload();
+        } else {
+            showAlert('Erreur lors de la suppression: ' + data.error, 'danger');
+        }
+        bootstrap.Modal.getInstance(document.getElementById('deleteModal')).hide();
+    })
+    .catch(error => {
+        showAlert('Erreur: ' + error.message, 'danger');
+        bootstrap.Modal.getInstance(document.getElementById('deleteModal')).hide();
+    });
+});
+
+function getStatusColor(status) {
+    switch(status) {
+        case 'completed': return 'success';
+        case 'running': return 'primary';
+        case 'error': return 'danger';
+        default: return 'secondary';
+    }
+}
+
+function formatDate(dateString) {
+    if (!dateString) return 'N/A';
+    return new Date(dateString).toLocaleString('fr-FR');
+}
+
+// Auto-refresh toutes les 30 secondes
+setInterval(function() {
+    // Vérifier s'il y a des tâches en cours
+    const runningTasks = document.querySelectorAll('.badge.bg-primary');
+    if (runningTasks.length > 0) {
+        location.reload();
+    }
+}, 30000);
+</script>
+{% endblock %}

@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+
+{% block title %}YouTube Downloader - Web Scraper Pro{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0">
+                    <i class="fab fa-youtube"></i> YouTube Downloader
+                </h3>
+            </div>
+            <div class="card-body">
+                <form id="youtubeForm">
+                    <!-- URL Input -->
+                    <div class="mb-4">
+                        <label for="youtubeUrl" class="form-label">
+                            <i class="fas fa-link"></i> URL YouTube
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fab fa-youtube text-danger"></i>
+                            </span>
+                            <input type="url" class="form-control" id="youtubeUrl" 
+                                   placeholder="https://www.youtube.com/watch?v=..." required>
+                            <button class="btn btn-outline-secondary" type="button" id="analyzeUrl">
+                                <i class="fas fa-search"></i> Analyser
+                            </button>
+                        </div>
+                        <div class="form-text">
+                            Supporté: vidéos individuelles, playlists, chaînes
+                        </div>
+                    </div>
+
+                    <!-- Informations de la vidéo -->
+                    <div id="videoInfo" class="mb-4" style="display: none;">
+                        <div class="card border-info">
+                            <div class="card-header bg-info text-white">
+                                <h6 class="mb-0"><i class="fas fa-info-circle"></i> Informations</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img id="videoThumbnail" src="" alt="Thumbnail" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 id="videoTitle">Titre</h6>
+                                        <p class="text-muted mb-1">
+                                            <i class="fas fa-user"></i> <span id="videoAuthor">Auteur</span>
+                                        </p>
+                                        <p class="text-muted mb-1">
+                                            <i class="fas fa-clock"></i> <span id="videoDuration">Durée</span>
+                                        </p>
+                                        <p class="text-muted mb-1">
+                                            <i class="fas fa-eye"></i> <span id="videoViews">Vues</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Options de téléchargement -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label for="downloadType" class="form-label">
+                                <i class="fas fa-download"></i> Type de téléchargement
+                            </label>
+                            <select class="form-select" id="downloadType">
+                                <option value="video">Vidéo + Audio</option>
+                                <option value="audio">Audio uniquement (MP3)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="quality" class="form-label">
+                                <i class="fas fa-hd-video"></i> Qualité
+                            </label>
+                            <select class="form-select" id="quality">
+                                <option value="best">Meilleure qualité</option>
+                                <option value="1080">1080p (Full HD)</option>
+                                <option value="720">720p (HD)</option>
+                                <option value="480">480p</option>
+                                <option value="360">360p</option>
+                                <option value="worst">Qualité minimale</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Options playlist -->
+                    <div class="mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="isPlaylist">
+                            <label class="form-check-label" for="isPlaylist">
+                                <i class="fas fa-list"></i> Il s'agit d'une playlist
+                            </label>
+                            <div class="form-text">
+                                Cochez cette option si l'URL pointe vers une playlist complète
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formats disponibles -->
+                    <div id="formatsSection" class="mb-4" style="display: none;">
+                        <div class="card border-secondary">
+                            <div class="card-header">
+                                <h6 class="mb-0">
+                                    <i class="fas fa-list-alt"></i> Formats disponibles
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Formats vidéo</h6>
+                                        <div id="videoFormats" class="format-list">
+                                            <!-- Rempli dynamiquement -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Formats audio</h6>
+                                        <div id="audioFormats" class="format-list">
+                                            <!-- Rempli dynamiquement -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Boutons d'action -->
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-outline-secondary" id="resetYoutubeForm">
+                            <i class="fas fa-undo"></i> Réinitialiser
+                        </button>
+                        <button type="submit" class="btn btn-danger btn-lg" id="startDownload">
+                            <i class="fas fa-download"></i> Télécharger
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Astuces -->
+        <div class="mt-4">
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h6 class="mb-0"><i class="fas fa-lightbulb"></i> Astuces</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="mb-0">
+                        <li>Pour les playlists, l'URL doit contenir <code>&list=</code></li>
+                        <li>Le téléchargement audio convertit automatiquement en MP3</li>
+                        <li>La "meilleure qualité" sélectionne automatiquement le format optimal</li>
+                        <li>Les vidéos privées ou géo-bloquées ne peuvent pas être téléchargées</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('youtubeForm');
+    const analyzeButton = document.getElementById('analyzeUrl');
+    const startButton = document.getElementById('startDownload');
+    const resetButton = document.getElementById('resetYoutubeForm');
+    const downloadTypeSelect = document.getElementById('downloadType');
+    const qualitySelect = document.getElementById('quality');
+    let currentTaskId = null;
+
+    // Analyse de l'URL
+    analyzeButton.addEventListener('click', function() {
+        const url = document.getElementById('youtubeUrl').value;
+        if (!url) {
+            showAlert('Veuillez entrer une URL YouTube', 'warning');
+            return;
+        }
+
+        if (!isYouTubeUrl(url)) {
+            showAlert('Veuillez entrer une URL YouTube valide', 'danger');
+            return;
+        }
+
+        analyzeUrl(url);
+    });
+
+    // Changement de type de téléchargement
+    downloadTypeSelect.addEventListener('change', function() {
+        const isAudio = this.value === 'audio';
+        if (isAudio) {
+            qualitySelect.innerHTML = `
+                <option value="best">Meilleure qualité audio</option>
+                <option value="320">320 kbps</option>
+                <option value="256">256 kbps</option>
+                <option value="192">192 kbps</option>
+                <option value="128">128 kbps</option>
+            `;
+        } else {
+            qualitySelect.innerHTML = `
+                <option value="best">Meilleure qualité</option>
+                <option value="1080">1080p (Full HD)</option>
+                <option value="720">720p (HD)</option>
+                <option value="480">480p</option>
+                <option value="360">360p</option>
+                <option value="worst">Qualité minimale</option>
+            `;
+        }
+    });
+
+    // Réinitialisation
+    resetButton.addEventListener('click', function() {
+        form.reset();
+        document.getElementById('videoInfo').style.display = 'none';
+        document.getElementById('formatsSection').style.display = 'none';
+        downloadTypeSelect.value = 'video';
+        downloadTypeSelect.dispatchEvent(new Event('change'));
+    });
+
+    // Soumission du formulaire
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            url: document.getElementById('youtubeUrl').value,
+            options: {
+                quality: document.getElementById('quality').value,
+                audio_only: document.getElementById('downloadType').value === 'audio',
+                is_playlist: document.getElementById('isPlaylist').checked
+            }
+        };
+
+        startDownload(formData);
+    });
+
+    function isYouTubeUrl(url) {
+        const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+/;
+        return youtubeRegex.test(url);
+    }
+
+    function analyzeUrl(url) {
+        analyzeButton.disabled = true;
+        analyzeButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyse...';
+
+        // Simulation d'analyse (à remplacer par un vrai appel API)
+        setTimeout(() => {
+            // Exemple de données factices
+            const videoData = {
+                title: "Exemple de vidéo YouTube",
+                author: "Nom de la chaîne",
+                duration: "5:30",
+                views: "1,234,567",
+                thumbnail: "https://via.placeholder.com/320x180.png?text=YouTube+Thumbnail"
+            };
+            
+            displayVideoInfo(videoData);
+            analyzeButton.innerHTML = '<i class="fas fa-search"></i> Analyser';
+            analyzeButton.disabled = false;
+        }, 2000);
+    }
+
+    function displayVideoInfo(data) {
+        document.getElementById('videoTitle').textContent = data.title;
+        document.getElementById('videoAuthor').textContent = data.author;
+        document.getElementById('videoDuration').textContent = data.duration;
+        document.getElementById('videoViews').textContent = data.views;
+        document.getElementById('videoThumbnail').src = data.thumbnail;
+        
+        document.getElementById('videoInfo').style.display = 'block';
+        
+        // Détecter automatiquement si c'est une playlist
+        const url = document.getElementById('youtubeUrl').value;
+        if (url.includes('list=') || url.includes('/playlist?')) {
+            document.getElementById('isPlaylist').checked = true;
+        }
+    }
+
+    function startDownload(data) {
+        startButton.disabled = true;
+        startButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Démarrage...';
+
+        fetch('/start-youtube-download', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.error) {
+                showAlert(result.error, 'danger');
+                startButton.disabled = false;
+                startButton.innerHTML = '<i class="fas fa-download"></i> Télécharger';
+            } else {
+                currentTaskId = result.task_id;
+                showProgressModal();
+                checkTaskStatus(currentTaskId);
+            }
+        })
+        .catch(error => {
+            showAlert('Erreur: ' + error.message, 'danger');
+            startButton.disabled = false;
+            startButton.innerHTML = '<i class="fas fa-download"></i> Télécharger';
+        });
+    }
+
+    function checkTaskStatus(taskId) {
+        const checkStatus = () => {
+            fetch(`/task-status/${taskId}`)
+            .then(response => response.json())
+            .then(status => {
+                updateProgress(status);
+                
+                if (status.status === 'running') {
+                    setTimeout(checkStatus, 2000);
+                } else if (status.status === 'completed') {
+                    showCompletionResults(taskId, status);
+                } else if (status.status === 'error') {
+                    showAlert('Erreur: ' + status.error, 'danger');
+                    hideProgressModal();
+                    resetForm();
+                }
+            })
+            .catch(error => {
+                console.error('Erreur de vérification du statut:', error);
+                setTimeout(checkStatus, 5000);
+            });
+        };
+        
+        checkStatus();
+    }
+
+    function resetForm() {
+        startButton.disabled = false;
+        startButton.innerHTML = '<i class="fas fa-download"></i> Télécharger';
+    }
+});
+</script>
+{% endblock %}

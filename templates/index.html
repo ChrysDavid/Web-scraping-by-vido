@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - Web Scraper Pro{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <!-- Hero Section -->
+        <div class="hero-section text-center mb-5">
+            <h1 class="display-4 mb-4">
+                <i class="fas fa-download text-primary"></i>
+                Web Scraper Pro
+            </h1>
+            <p class="lead">
+                Votre solution complète pour le scraping web et le téléchargement de contenu YouTube
+            </p>
+        </div>
+
+        <!-- Options principales -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm hover-card">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-globe fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title">Web Scraping</h3>
+                        <p class="card-text">
+                            Téléchargez des sites web complets avec leurs ressources 
+                            (HTML, CSS, JS, images, fonts)
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success"></i> Pages multiples</li>
+                            <li><i class="fas fa-check text-success"></i> Ressources externes</li>
+                            <li><i class="fas fa-check text-success"></i> Organisation automatique</li>
+                            <li><i class="fas fa-check text-success"></i> Navigation intelligente</li>
+                        </ul>
+                        <a href="{{ url_for('web_scraping') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-globe"></i> Commencer
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm hover-card">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fab fa-youtube fa-3x text-danger"></i>
+                        </div>
+                        <h3 class="card-title">YouTube Downloader</h3>
+                        <p class="card-text">
+                            Téléchargez des vidéos et playlists YouTube en haute qualité 
+                            ou en audio uniquement
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success"></i> Vidéos individuelles</li>
+                            <li><i class="fas fa-check text-success"></i> Playlists complètes</li>
+                            <li><i class="fas fa-check text-success"></i> Qualité personnalisée</li>
+                            <li><i class="fas fa-check text-success"></i> Audio seulement (MP3)</li>
+                        </ul>
+                        <a href="{{ url_for('youtube_download') }}" class="btn btn-danger btn-lg">
+                            <i class="fab fa-youtube"></i> Commencer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fonctionnalités avancées -->
+        <div class="features-section mb-5">
+            <h2 class="text-center mb-4">Fonctionnalités Avancées</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-item text-center">
+                        <i class="fas fa-cog fa-2x text-primary mb-3"></i>
+                        <h5>Configuration Flexible</h5>
+                        <p class="text-muted">
+                            Personnalisez vos téléchargements avec de nombreuses options
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item text-center">
+                        <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+                        <h5>Suivi en Temps Réel</h5>
+                        <p class="text-muted">
+                            Suivez la progression de vos téléchargements en direct
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item text-center">
+                        <i class="fas fa-history fa-2x text-info mb-3"></i>
+                        <h5>Historique Complet</h5>
+                        <p class="text-muted">
+                            Accédez à l'historique de tous vos téléchargements
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Démarrage rapide -->
+        <div class="quick-start-section">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-rocket"></i> Démarrage Rapide
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-globe text-primary"></i> Web Scraping</h6>
+                            <ol class="small">
+                                <li>Allez dans l'onglet "Web Scraping"</li>
+                                <li>Entrez l'URL du site à scraper</li>
+                                <li>Configurez les options selon vos besoins</li>
+                                <li>Cliquez sur "Démarrer le Scraping"</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="fab fa-youtube text-danger"></i> YouTube</h6>
+                            <ol class="small">
+                                <li>Allez dans l'onglet "YouTube"</li>
+                                <li>Collez le lien de la vidéo/playlist</li>
+                                <li>Choisissez la qualité et le format</li>
+                                <li>Cliquez sur "Télécharger"</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

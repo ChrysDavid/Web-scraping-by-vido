@@ -265,7 +265,7 @@ def run_youtube_download(task_id, url, output_folder, options):
         logging.error(f"Erreur lors du téléchargement YouTube {task_id}: {e}")
 
 # Nettoyage périodique des anciens téléchargements
-@app.before_first_request
+@app.before_request
 def setup_cleanup():
     """Configure le nettoyage automatique"""
     def cleanup_task():

@@ -1,0 +1,391 @@
+2025-08-17 00:55:01,647 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-08-17 00:55:01,648 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-08-17 00:55:01,661 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 00:55:02,386 WARNING werkzeug  * Debugger is active!
+2025-08-17 00:55:02,388 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 00:55:13,087 INFO werkzeug  * Detected change in 'C:\\Python313\\Lib\\encodings\\unicode_escape.py', reloading
+2025-08-17 00:55:13,136 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:13] "GET / HTTP/1.1" 200 -
+2025-08-17 00:55:13,275 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:13] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-08-17 00:55:13,306 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:13] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-08-17 00:55:13,602 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 00:55:14,576 WARNING werkzeug  * Debugger is active!
+2025-08-17 00:55:14,579 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 00:55:14,596 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-17 00:55:19,567 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:19] "GET /web-scraping HTTP/1.1" 200 -
+2025-08-17 00:55:19,709 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 00:55:19,712 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 00:55:31,341 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:31] "GET / HTTP/1.1" 200 -
+2025-08-17 00:55:31,353 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 00:55:31,354 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 00:55:32,748 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:32] "GET /youtube-download HTTP/1.1" 200 -
+2025-08-17 00:55:32,760 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 00:55:32,761 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 00:55:33,732 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:33] "GET /results HTTP/1.1" 200 -
+2025-08-17 00:55:33,743 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 00:55:33,744 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 00:55:36,724 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:36] "GET / HTTP/1.1" 200 -
+2025-08-17 00:55:36,737 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 00:55:36,737 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 00:55:43,310 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:43] "GET /web-scraping HTTP/1.1" 200 -
+2025-08-17 00:55:43,328 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 00:55:43,328 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:55:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 00:56:24,987 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:24] "POST /start-web-scraping HTTP/1.1" 200 -
+2025-08-17 00:56:25,001 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:25] "GET /task-status/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:56:26,315 INFO scrapers.web_scraper Démarrage du scraping de https://vido-tech.onrender.com/...
+2025-08-17 00:56:27,013 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:27] "GET /task-status/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:56:29,030 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:29] "GET /task-status/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:56:29,239 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 00:56:29,243 INFO scrapers.web_scraper Style CSS extrait: downloads\web_content\web_1755392184\css\4e14f3ec.css
+2025-08-17 00:56:29,243 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 00:56:29,246 INFO scrapers.web_scraper Script JS extrait: downloads\web_content\web_1755392184\js\c1bb6585.js
+2025-08-17 00:56:29,249 INFO scrapers.web_scraper Script JS extrait: downloads\web_content\web_1755392184\js\c9f1b7ca.js
+2025-08-17 00:56:29,250 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 00:56:29,966 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392184\css\styles.css
+2025-08-17 00:56:31,048 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:31] "GET /task-status/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:56:31,088 ERROR scrapers.web_scraper Erreur lors du téléchargement de https://vido-tech.onrender.com/css/4e14f3ec.css: 404 Client Error: Not Found for url: https://vido-tech.onrender.com/css/4e14f3ec.css
+2025-08-17 00:56:32,330 ERROR scrapers.web_scraper Erreur lors du téléchargement de https://vido-tech.onrender.com/js/c1bb6585.js: 404 Client Error: Not Found for url: https://vido-tech.onrender.com/js/c1bb6585.js
+2025-08-17 00:56:32,813 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392184\js\script.js
+2025-08-17 00:56:33,431 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:33] "GET /task-status/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:56:33,495 ERROR scrapers.web_scraper Erreur lors du téléchargement de https://vido-tech.onrender.com/js/c9f1b7ca.js: 404 Client Error: Not Found for url: https://vido-tech.onrender.com/js/c9f1b7ca.js
+2025-08-17 00:56:33,507 INFO scrapers.web_scraper Page https://vido-tech.onrender.com/ sauvegardée avec succès!
+2025-08-17 00:56:36,444 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:56:36] "GET /task-status/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:56:36,640 INFO root Web scraping terminé pour web_1755392184: 6 fichiers
+2025-08-17 00:57:07,211 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392184.zip', reloading
+2025-08-17 00:57:07,274 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392184.zip', reloading
+2025-08-17 00:57:07,297 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:57:07] "GET /download/web_1755392184 HTTP/1.1" 200 -
+2025-08-17 00:57:07,758 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 00:57:08,767 WARNING werkzeug  * Debugger is active!
+2025-08-17 00:57:08,770 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 00:59:17,716 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:17] "POST /start-web-scraping HTTP/1.1" 200 -
+2025-08-17 00:59:17,730 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:17] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:18,812 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/...
+2025-08-17 00:59:19,741 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:19] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:21,754 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:21] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:22,912 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 00:59:22,913 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 00:59:22,915 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 00:59:23,771 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:23] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:24,132 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\bootstrap.min.css
+2025-08-17 00:59:24,395 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\animate.css
+2025-08-17 00:59:24,646 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\swiper-bundle.min.css
+2025-08-17 00:59:24,894 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\flaticon.css
+2025-08-17 00:59:25,160 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\all.min.css
+2025-08-17 00:59:25,406 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\bootstrap-icons.css
+2025-08-17 00:59:25,688 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\jquery.fancybox.min.css
+2025-08-17 00:59:25,788 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:25] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:26,645 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\7576b143.css
+2025-08-17 00:59:26,897 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\css\main-LTR.css
+2025-08-17 00:59:27,162 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\jquery-3.6.1.min.js
+2025-08-17 00:59:27,454 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\appear.min.js
+2025-08-17 00:59:27,720 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\bootstrap.bundle.min.js
+2025-08-17 00:59:27,807 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:27] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:27,997 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\jquery.countTo.js
+2025-08-17 00:59:28,269 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\wow.min.js
+2025-08-17 00:59:28,557 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\swiper-bundle.min.js
+2025-08-17 00:59:28,820 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\particles.min.js
+2025-08-17 00:59:29,106 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\vanilla-tilt.min.js
+2025-08-17 00:59:29,706 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\isotope-min.js
+2025-08-17 00:59:29,824 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:29] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:30,019 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\jquery.fancybox.min.js
+2025-08-17 00:59:30,530 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\js\main.js
+2025-08-17 00:59:30,819 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\logo-light.png
+2025-08-17 00:59:31,481 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\logo-dark.png
+2025-08-17 00:59:31,839 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:31] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:32,006 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\1.png
+2025-08-17 00:59:32,377 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\2.png
+2025-08-17 00:59:32,902 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\1.jpg
+2025-08-17 00:59:33,264 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\2.jpg
+2025-08-17 00:59:33,855 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:33] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:33,934 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\3.jpg
+2025-08-17 00:59:34,240 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\4.jpg
+2025-08-17 00:59:34,507 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\5.jpg
+2025-08-17 00:59:34,791 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\6.jpg
+2025-08-17 00:59:35,046 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\2-white.png
+2025-08-17 00:59:35,320 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\3-white.png
+2025-08-17 00:59:35,584 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\4-white.png
+2025-08-17 00:59:35,852 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\5-white.png
+2025-08-17 00:59:35,873 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:35] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:36,100 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\6-white.png
+2025-08-17 00:59:36,364 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\7-white.png
+2025-08-17 00:59:36,629 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\1-white.png
+2025-08-17 00:59:37,887 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:37] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:39,905 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:39] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:40,078 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\3.png
+2025-08-17 00:59:41,922 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:41] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:43,081 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392357\images\logo-colored.png
+2025-08-17 00:59:43,129 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/ sauvegardée avec succès!
+2025-08-17 00:59:43,935 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:43] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:45,957 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:45] "GET /task-status/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:46,324 INFO root Web scraping terminé pour web_1755392357: 40 fichiers
+2025-08-17 00:59:50,506 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:50,754 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 00:59:51,677 WARNING werkzeug  * Debugger is active!
+2025-08-17 00:59:51,681 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 00:59:51,700 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:52,099 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:52,515 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:52,785 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 00:59:53,694 WARNING werkzeug  * Debugger is active!
+2025-08-17 00:59:53,697 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 00:59:53,825 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:53,840 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:54,224 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:54] "GET /download/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:54,791 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 00:59:55,759 WARNING werkzeug  * Debugger is active!
+2025-08-17 00:59:55,762 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 00:59:59,253 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:59,264 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 00:59:59,657 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 00:59:59] "GET /download/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 00:59:59,866 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:00:00,738 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:00:00,741 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:00:12,762 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:12,796 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:12,951 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:00:13,817 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:00:13,820 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:00:13,839 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:13,851 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:14,223 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:00:14] "GET /download/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 01:00:14,931 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:00:15,985 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:00:15,988 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:00:24,659 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:24,675 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:25,061 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:00:25] "GET /download/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 01:00:25,191 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:00:26,206 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:00:26,211 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:00:55,109 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:55,163 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:55,668 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:00:56,743 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:00:56,746 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:00:56,765 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:56,779 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:00:57,184 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:00:57] "GET /download/web_1755392357 HTTP/1.1" 200 -
+2025-08-17 01:00:57,843 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:00:58,772 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:00:58,775 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:01:14,078 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:01:14] "GET /results HTTP/1.1" 200 -
+2025-08-17 01:01:14,204 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:01:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 01:01:14,206 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:01:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 01:01:16,564 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:01:16] "GET /web-scraping HTTP/1.1" 200 -
+2025-08-17 01:01:16,577 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:01:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-17 01:01:16,579 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:01:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-17 01:01:45,887 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392184.zip', reloading
+2025-08-17 01:01:45,939 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392357.zip', reloading
+2025-08-17 01:01:46,340 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:01:47,257 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:01:47,260 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:02:23,617 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:23] "POST /start-web-scraping HTTP/1.1" 200 -
+2025-08-17 01:02:23,624 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:23] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:24,707 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/...
+2025-08-17 01:02:25,634 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:25] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:27,649 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:27] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:29,191 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:02:29,192 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:02:29,193 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:02:29,665 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:29] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:30,322 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\bootstrap.min.css
+2025-08-17 01:02:30,580 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\animate.css
+2025-08-17 01:02:30,839 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\swiper-bundle.min.css
+2025-08-17 01:02:31,092 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\flaticon.css
+2025-08-17 01:02:31,352 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\all.min.css
+2025-08-17 01:02:31,607 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\bootstrap-icons.css
+2025-08-17 01:02:31,682 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:31] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:31,890 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\jquery.fancybox.min.css
+2025-08-17 01:02:32,863 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\7576b143.css
+2025-08-17 01:02:33,145 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\css\main-LTR.css
+2025-08-17 01:02:33,409 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\jquery-3.6.1.min.js
+2025-08-17 01:02:33,678 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\appear.min.js
+2025-08-17 01:02:33,698 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:33] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:33,947 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\bootstrap.bundle.min.js
+2025-08-17 01:02:34,229 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\jquery.countTo.js
+2025-08-17 01:02:34,489 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\wow.min.js
+2025-08-17 01:02:34,738 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\swiper-bundle.min.js
+2025-08-17 01:02:34,996 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\particles.min.js
+2025-08-17 01:02:35,248 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\vanilla-tilt.min.js
+2025-08-17 01:02:35,545 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\isotope-min.js
+2025-08-17 01:02:35,715 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:35] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:35,844 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\jquery.fancybox.min.js
+2025-08-17 01:02:36,272 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\js\main.js
+2025-08-17 01:02:36,945 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\logo-light.png
+2025-08-17 01:02:37,223 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\logo-dark.png
+2025-08-17 01:02:37,707 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\1.png
+2025-08-17 01:02:37,729 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:37] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:37,971 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\2.png
+2025-08-17 01:02:38,364 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\1.jpg
+2025-08-17 01:02:38,625 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\2.jpg
+2025-08-17 01:02:39,062 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\3.jpg
+2025-08-17 01:02:39,317 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\4.jpg
+2025-08-17 01:02:39,590 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\5.jpg
+2025-08-17 01:02:39,748 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:39] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:39,905 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\6.jpg
+2025-08-17 01:02:40,167 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\2-white.png
+2025-08-17 01:02:40,416 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\3-white.png
+2025-08-17 01:02:40,671 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\4-white.png
+2025-08-17 01:02:40,945 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\5-white.png
+2025-08-17 01:02:41,221 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\6-white.png
+2025-08-17 01:02:41,487 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\7-white.png
+2025-08-17 01:02:41,758 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\1-white.png
+2025-08-17 01:02:41,766 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:41] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:43,774 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:43] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:45,101 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\3.png
+2025-08-17 01:02:45,789 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:45] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:47,813 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:47] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:47,907 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\logo-colored.png
+2025-08-17 01:02:47,953 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/ sauvegardée avec succès!
+2025-08-17 01:02:48,958 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/#0...
+2025-08-17 01:02:49,827 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:49] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:51,052 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:02:51,053 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:02:51,054 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:02:51,836 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:51] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:53,847 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:53] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:55,863 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:55] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:02:57,881 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:02:57] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:00,440 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:00] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:03,441 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:03] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:06,442 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:06] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:07,498 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/#0 sauvegardée avec succès!
+2025-08-17 01:03:08,499 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-2.html...
+2025-08-17 01:03:09,441 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:09] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:10,897 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:03:10,898 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:03:10,898 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:03:12,428 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:12] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:14,936 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:14] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:17,431 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:17] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:17,538 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\illustration-3.png
+2025-08-17 01:03:20,435 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:20] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:23,441 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:23] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:26,436 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:26] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:28,457 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-2.html sauvegardée avec succès!
+2025-08-17 01:03:28,460 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:28] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:29,459 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-2.html#0...
+2025-08-17 01:03:30,475 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:30] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:31,542 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:03:31,543 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:03:31,544 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:03:32,490 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:32] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:34,507 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:34] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:36,514 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:36] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:38,523 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:38] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:40,536 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:40] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:42,556 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:42] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:44,572 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:44] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:46,589 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:46] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:48,605 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:48] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:49,308 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-2.html#0 sauvegardée avec succès!
+2025-08-17 01:03:50,311 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-3.html...
+2025-08-17 01:03:50,624 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:50] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:52,638 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:52] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:52,904 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:03:52,905 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:03:52,906 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:03:54,646 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:54] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:56,658 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:56] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:03:58,671 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:03:58] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:00,422 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\illustration-2.png
+2025-08-17 01:04:00,685 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:00] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:01,169 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\photo-1.png
+2025-08-17 01:04:01,921 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\photo-2.png
+2025-08-17 01:04:02,703 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:02] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:04,720 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:04] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:06,730 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:06] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:08,744 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:08] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:10,752 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:10] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:11,471 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-3.html sauvegardée avec succès!
+2025-08-17 01:04:12,474 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-3.html#0...
+2025-08-17 01:04:12,765 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:12] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:14,604 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:04:14,605 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:04:14,606 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:04:14,784 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:14] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:16,798 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:16] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:18,818 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:18] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:20,828 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:20] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:22,839 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:22] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:25,432 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:25] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:28,441 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:28] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:31,433 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:31] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:34,187 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-3.html#0 sauvegardée avec succès!
+2025-08-17 01:04:34,430 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:34] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:35,190 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-4.html...
+2025-08-17 01:04:37,428 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:37] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:37,796 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:04:37,797 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:04:37,798 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:04:40,433 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:40] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:43,435 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:43] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:45,405 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\illustration-1.png
+2025-08-17 01:04:45,446 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:45] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:47,456 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:47] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:49,464 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:49] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:51,481 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:51] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:53,496 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:53] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:55,513 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:55] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:57,548 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:57] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:04:57,548 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-4.html sauvegardée avec succès!
+2025-08-17 01:04:58,551 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-4.html#0...
+2025-08-17 01:04:59,563 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:04:59] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:00,678 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:05:00,678 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:05:00,679 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:05:01,570 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:01] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:04,439 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:04] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:07,439 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:07] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:10,439 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:10] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:13,438 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:13] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:16,437 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:16] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:18,992 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-4.html#0 sauvegardée avec succès!
+2025-08-17 01:05:19,435 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:19] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:19,993 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-5.html...
+2025-08-17 01:05:22,339 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:05:22,339 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:05:22,340 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:05:22,429 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:22] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:25,435 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:25] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:28,439 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:28] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:28,779 INFO scrapers.web_scraper Fichier téléchargé: downloads\web_content\web_1755392543\images\illustration-4.png
+2025-08-17 01:05:31,427 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:31] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:34,435 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:34] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:37,430 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:37] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:39,837 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-5.html sauvegardée avec succès!
+2025-08-17 01:05:40,436 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:40] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:40,839 INFO scrapers.web_scraper Démarrage du scraping de https://amincods.com/html/flex-it/home-5.html#0...
+2025-08-17 01:05:42,901 INFO scrapers.web_scraper Extraction des styles inline...
+2025-08-17 01:05:42,901 INFO scrapers.web_scraper Extraction des scripts inline...
+2025-08-17 01:05:42,902 INFO scrapers.web_scraper Traitement des ressources externes...
+2025-08-17 01:05:43,436 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:43] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:45,451 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:45] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:47,472 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:47] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:49,481 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:49] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:51,489 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:51] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:53,497 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:53] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:55,505 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:55] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:57,511 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:57] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:05:59,521 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:05:59] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:06:01,054 INFO scrapers.web_scraper Page https://amincods.com/html/flex-it/home-5.html#0 sauvegardée avec succès!
+2025-08-17 01:06:01,539 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:06:01] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:06:03,558 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:06:03] "GET /task-status/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:06:04,280 INFO root Web scraping terminé pour web_1755392543: 55 fichiers
+2025-08-17 01:06:08,107 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392543.zip', reloading
+2025-08-17 01:06:08,464 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392543.zip', reloading
+2025-08-17 01:06:08,844 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:06:09,825 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:06:09,828 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:06:09,845 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392543.zip', reloading
+2025-08-17 01:06:09,858 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392543.zip', reloading
+2025-08-17 01:06:10,454 INFO werkzeug 127.0.0.1 - - [17/Aug/2025 01:06:10] "GET /download/web_1755392543 HTTP/1.1" 200 -
+2025-08-17 01:06:10,920 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:06:11,856 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:06:11,859 INFO werkzeug  * Debugger PIN: 135-407-352
+2025-08-17 01:06:14,432 INFO werkzeug  * Detected change in 'D:\\Users\\kchry\\OneDrive\\Bureau\\Commit Git Quotidien\\web-scraping-by-Vido\\downloads\\web_content\\web_1755392543.zip', reloading
+2025-08-17 01:06:14,949 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2025-08-17 01:06:15,741 WARNING werkzeug  * Debugger is active!
+2025-08-17 01:06:15,744 INFO werkzeug  * Debugger PIN: 135-407-352
